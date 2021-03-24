@@ -1,0 +1,105 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    background: rgb(255, 30, 105);
+    color: white;
+    padding: 15px 30px;
+    transition: 0.9s;
+}
+
+header {
+    display: flex;
+}
+
+.menu > li:hover > a{
+    background: rgb(94, 0, 0);
+}
+
+.menu > li {
+    display: inline-block;
+    position: relative;
+}
+
+.menu > li > ol {
+    position: absolute;
+    padding-left: 0%;
+    display: none;
+}
+
+.menu > li:hover > ol {
+    display: block;
+}
+
+ol > li {
+    margin-top: 35px;
+}
+
+ol > li > a {
+    background: black;
+}
+.topblock {
+    margin-top: -50px;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    position: relative;
+    z-index: -3;
+}
+
+.topblock::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+article > img {
+    margin-right: 15px;
+    float: left;
+}
+
+.clearblock {
+    clear: both;
+    margin-bottom: 20px;
+}
+
+input {
+    display: none;
+}
+
+.menu_label {
+    padding: 10px;
+    background: yellow;
+    font-size: 20px;
+    display: flex;
+}
+
+.formlist {
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+.form_item > a {
+    display: flex;
+    padding: 10px;
+    background: yellow;
+    font-size: 20px;
+    color: black;
+}
+
+#menu:checked ~ .formlist {
+    display: flex;
+}
